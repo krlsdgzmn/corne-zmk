@@ -8,6 +8,18 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        mod_tap_delay: mod_tap_delay {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_DELAY";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
